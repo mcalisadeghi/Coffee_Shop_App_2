@@ -5,9 +5,25 @@ class ShopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Shop page',
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(25.0),
+        child: Column(
+          children: [
+            // heading message
+            const Text(
+              'How would uou like you coffee',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            //list of coffee to buy
+            Expanded(child: ListView.builder(itemBuilder: (context, index) {}))
+          ],
+        ),
       ),
     );
   }
