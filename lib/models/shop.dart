@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/coffee.dart';
 
-class Shop {
+class CShop {
   // coffee for sle list
   final List<Coffee> _shop = [
     // black coffee
@@ -28,7 +27,7 @@ class Shop {
   ];
 
   // user cart
-  List<Coffee> _userCart = [];
+  final List<Coffee> _userCart = [];
 
   // get coffee list
   List<Coffee> get coffeeShop => _shop;

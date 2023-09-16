@@ -24,7 +24,7 @@ class BottomNavBar extends StatelessWidget {
         tabActiveBorder: Border.all(
           color: Colors.white,
         ),
-        tabs: [
+        tabs: const <GButton>[
           GButton(
             icon: Icons.home,
             text: 'Shop',
