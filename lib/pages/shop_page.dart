@@ -9,9 +9,9 @@ class ShopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<CShop>(
-      builder: (context, coffee, child) {
-        return SafeArea(
-          child: Padding(
+      builder: (context, coffee, child) => SafeArea(
+        child: Builder(builder: (context) {
+          return Padding(
             padding: const EdgeInsets.all(
               25.0,
             ),
@@ -34,7 +34,6 @@ class ShopPage extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index) {
                       // get individual coffee
                       Coffee eachCoffee = coffee.coffeeShop[index];
-
                       // return the tile for this coffee
                       return ListTile(
                         title: Text(
@@ -46,9 +45,9 @@ class ShopPage extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-        );
-      },
+          );
+        }),
+      ),
     );
   }
 }
