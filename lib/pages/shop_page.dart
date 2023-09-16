@@ -52,7 +52,7 @@ class _ShopPageState extends State<ShopPage> {
                             eachCoffee,
                           ),
                           icon: const Icon(
-                            Icons.delete,
+                            Icons.add,
                           ),
                         );
                       },
