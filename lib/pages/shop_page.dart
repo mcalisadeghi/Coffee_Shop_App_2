@@ -14,6 +14,15 @@ class ShopPage extends StatefulWidget {
 class _ShopPageState extends State<ShopPage> {
   addToCart(Coffee coffe) {
     Provider.of<CShop>(context, listen: false).addItemToCart(coffe);
+    // let user know it been succesfully added
+    showDialog(
+      context: context,
+      builder: (context) => const AlertDialog(
+        title: Text(
+          'succesfully added to cart',
+        ),
+      ),
+    );
   }
 
   @override
