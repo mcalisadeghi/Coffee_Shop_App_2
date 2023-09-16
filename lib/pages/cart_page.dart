@@ -12,9 +12,13 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
+  //remove item from cart
   removeFromCart(Coffee coffee) {
     Provider.of<CShop>(context, listen: false).removeItemToCart(coffee);
   }
+
+  // pay button
+  payNew() {}
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +62,28 @@ class _CartPageState extends State<CartPage> {
                 const Text(
                   'your cart is empy',
                 ),
-              ]
+              ],
+              GestureDetector(
+                onTap: payNew,
+                child: Container(
+                  padding: const EdgeInsets.all(
+                    25,
+                  ),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.brown,
+                    borderRadius: BorderRadius.circular(
+                      12,
+                    ),
+                  ),
+                  child: const Text(
+                    'pay now',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
