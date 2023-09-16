@@ -38,31 +38,31 @@ class _CartPageState extends State<CartPage> {
                 ),
               ),
               // list of cart itemss
-              if (valuee.userCart.isNotEmpty) ...[
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: valuee.userCart.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      // get individual cart item
-                      Coffee eachCoffee = valuee.userCart[index];
-                      // return coffee tile
-                      return CoffeeTaile(
-                        coffee: eachCoffee,
-                        onPressed: () => removeFromCart(
-                          eachCoffee,
-                        ),
-                        icon: const Icon(
-                          Icons.delete,
-                        ),
-                      );
-                    },
-                  ),
+              // if (valuee.userCart.isNotEmpty) ...[
+              Expanded(
+                child: ListView.builder(
+                  itemCount: valuee.userCart.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    // get individual cart item
+                    Coffee eachCoffee = valuee.userCart[index];
+                    // return coffee tile
+                    return CoffeeTaile(
+                      coffee: eachCoffee,
+                      onPressed: () => removeFromCart(
+                        eachCoffee,
+                      ),
+                      icon: const Icon(
+                        Icons.delete,
+                      ),
+                    );
+                  },
                 ),
-              ] else ...[
-                const Text(
-                  'your cart is empy',
-                ),
-              ],
+              ),
+              // ] else ...[
+              //   const Text(
+              //     'your cart is empy',
+              //   ),
+              // ],
               GestureDetector(
                 onTap: payNew,
                 child: Container(
@@ -78,6 +78,7 @@ class _CartPageState extends State<CartPage> {
                   ),
                   child: const Text(
                     'pay now',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
                     ),
