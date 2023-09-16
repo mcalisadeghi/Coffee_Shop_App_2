@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/coffee.dart';
 
-class CShop {
+class CShop extends ChangeNotifier {
   // coffee for sle list
   final List<Coffee> _shop = [
     // black coffee

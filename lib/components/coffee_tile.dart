@@ -10,15 +10,17 @@ class CoffeeTaile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        coffee.name,
-      ),
-      subtitle: Text(
-        coffee.price,
-      ),
-      leading: Image.asset(
-        coffee.imagePath,
+    return Container(
+      child: ListTile(
+        title: Text(
+          coffee.name,
+        ),
+        subtitle: Text(
+          coffee.price,
+        ),
+        leading: Image.asset(
+          coffee.imagePath,
+        ),
       ),
     );
   }

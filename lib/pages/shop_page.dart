@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/coffee_tile.dart';
 import 'package:flutter_application_1/models/coffee.dart';
 import 'package:flutter_application_1/models/shop.dart';
 import 'package:provider/provider.dart'; // این را اضافه کنید
@@ -35,10 +36,8 @@ class ShopPage extends StatelessWidget {
                       // get individual coffee
                       Coffee eachCoffee = coffee.coffeeShop[index];
                       // return the tile for this coffee
-                      return ListTile(
-                        title: Text(
-                          eachCoffee.name,
-                        ),
+                      return CoffeeTaile(
+                        coffee: eachCoffee,
                       );
                     },
                   ),
